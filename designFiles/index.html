@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Agency Website Template</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../assets/images/logo.png">
+<style>
+  *{
+    margin: 0;
+    padding:0;
+
+}
+body{
+    font-family: sans-serif;
+}
+#nav-bar{
+    position: sticky;
+    top:0;
+    z-index: 10;
+    font-size: 17px !important;
+}
+.navbar{
+    background-image: linear-gradient(to right,#17ba66,#06503b);
+    padding: 0 !important;
+}
+.navbar-brand img{
+    height: 80px;
+    padding-left: 20px;
+    filter:contrast(-200%);
+    margin-top: -7px;
+   
+}
+.navbar-nav li{
+    padding: 0 10px;
+}
+.navbar-nav li a{
+    color: #fff !important;
+    font-weight: 600;
+    float: right;
+   
+
+}
+.navbar-toggler-icon{
+    font-size: 20px !important;
+}
+.navbar-toggler{
+    outline: none !important;
+}
+/*banner*/
+#banner{
+    background-image: linear-gradient(to right,#17ba66,#06503b);
+    color: #fff;
+    padding-top: 1%;
+    font-size: 19px;
+}
+.promo-title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+   
+}
+.play-btn{
+    width:45px;
+    margin: 20px;
+}
+#banner a{
+    color: #fff;
+    text-decoration: none;
+}
+.bottom-img{
+    width: 100%;
+}
+#service-img{
+    width: 100px;
+}
+#contentimg{
+    height: 110px !important;
+    width: 200px !important ;
+}
+#services{
+    padding: 80px 0;
+}
+.service-img{
+    width: 100px;
+    margin-top: 20px;
+}
+.services{
+    padding: 20px;
+    font-size: 18px;
+}
+.services h4{
+    padding: 5px;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+.title::before{
+    content:"";
+    background: #03542c;
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(63px);
+
+}
+.title::after{
+    content:"";
+    background: #0c9d59;
+    height: 8px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: block;
+    transform: translateY(8px);
+    border-radius: 10px;
+}
+#services .btn-primary{
+    box-shadow: none;
+    padding:8px 25px;
+    border:none;
+    border-radius: 20px;
+    background-image: linear-gradient(to right,#17ba66,#06503b);
+}
+/*about-us section*/
+#about-us{
+    background: #f8f9fa;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.about-title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 8%;
+    color: #016d4e;
+
+}
+#about-us ul li{
+    margin-top: 10px 0;
+    font-size: 18px;
+
+}
+#about-us ul{
+    margin-left: 20px;
+}
+#testimonals{
+    margin: 100px 0;
+    font-size: 18px;
+}
+.testimonals{
+    border-left: 4px solid rgba(2, 137, 45, 0.467);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#user1{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0px 10px;
+   
+}
+#user2{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0px 10px;
+   
+}
+.user-details{
+    display: inline-block;
+    font-size: 12px;
+}
+#social-media{
+    background: #f8f9fa;
+    padding:100px 0
+}
+#social-media p{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.social-icons img{ 
+    width:60px;
+    transition: 0.5s;
+}
+.social-icons a:hover img{
+    transform: translateY(-10px);
+}
+/*footer section*/
+#footer{
+    background-image: linear-gradient(to right,#17ba66,#06503b);
+    color:#fff;
+    font-size: 18px;
+}
+.footer-img{
+    width: 100%;
+}
+.footer-box{
+    padding: 20px;
+   
+}
+.footer-box img{
+    width: 100px;
+    /* margin-top: -70px; */
+
+}
+.footer-box .fa{
+    margin-right: 8px;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 2px;
+    background-image: linear-gradient(to right,#17ba66,#06503b);
+    color: rgb(249, 255, 255)
+    ;
+
+}
+.footer-box .form-control{
+    box-shadow: none !important;
+    border: none;
+    border-radius: 0;
+    margin-top: 25px;
+    max-width: 250px;
+}
+.footer-box .btn-primary{
+    box-shadow: none !important;
+    border:none;
+    border-radius: 0;
+    margin-top: 30px;
+    background-image: linear-gradient(to right,#17ba66,#06503b);
+}
+.footie{
+    margin-top: 95px;
+}
+hr{
+    background-color: #f8f9fa;
+}
+.copy-right{
+    margin-bottom:0 ;
+    padding-bottom:20px ;
+    text-align: center;
+}
+.title{
+    color: #016d4e;
+}
+#findus{
+    color: #016d4e;
+
+}
+
+</style>
+</head>
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="../assets/images/log.png"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto  ">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#banner">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#services">SERVICES</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link "  id="navbarDropdown" role="button" aria-expanded="false" href="#banner">
+                      ABOUT US
+                    </a>
+                   
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#testimonals">TESTIMONIALS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="#footer">CONTACT</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success " type="submit" >Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+    </section>
+
+    <!--banner-->
+    <section id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="promo-title text-white">SOCIAL MEDIA MARKETING</p>
+                    <p> At <b>SocialSpark Agency</b>, we’re not just a social media agency—we’re your growth partners. In today’s digital world, visibility is everything. Our team of experts connects your brand with the right audience through creative, data-driven strategies, delivering real results across platforms like Facebook, Instagram, LinkedIn, and more. We don’t just manage your social media; we tell your brand’s story, drive engagement, and boost sales with innovative campaigns that cut through the noise. Let us help turn likes into loyalty and clicks into customers—because your success is our success..
+                      
+                      </p>
+                    <a href="#"><img src="../assets/images/play.png" class="play-btn">Watch tutorials</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="../assets/images/dig.webp" class="img-fluid">
+
+                </div>
+            </div>
+        </div>
+        <img src="../assets/images/wave1.png" class="bottom-img">
+
+    </section>
+
+    <!--services section-->
+    <section id="services">
+        <div class="container text-center">
+            <h1 class="title">WHAT WE DO?</h1>
+            <div class="row text-center">
+                <div class="col-md-4 services">
+                    <img src="../assets/images/mastery.png"  class="service-img">
+                    <h4> Social Media Mastery</h4>
+                    <p>We design powerful strategies that elevate your brand’s presence and ignite audience engagement across all platforms.</p>
+                </div>
+                <div class="col-md-4 services">
+                    <img src="../assets/images/cont.png"  id="contentimg" class="service-img">
+                    <h4>Content Creation</h4>
+                    <p>Our creative team crafts stunning visuals and compelling narratives that bring your brand story to life, capturing hearts and minds</p>
+                </div>
+                <div class="col-md-4 services">
+                    <img src="../assets/images/analyze.webp"  class="service-img">
+                    <h4>Insight-Driven Optimization</h4>
+                    <p>We analyze data to fine-tune your campaigns, ensuring every effort drives meaningful results and maximizes your return on investment.</p>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary">All Services</button>
+        </div>
+
+    </section>
+    <!--about us-->
+    <section id="about-us">
+        <div class="container">
+            <h1 class="title text-center"> WHY CHOOSE US ?</h1>
+            <div class="row">
+              <div class="col-md-6 col-lg-6 about-us">
+                <p class="about-title"> Why we're different</p>
+                <ul>
+                  <li>Tailored Strategies: Customized approaches that align with your unique goals.</li>
+                  <li>Creative Excellence: Innovative campaigns that blend creativity with data insights.</li>
+                  <li>Results-Focused: Continuous optimization for maximum impact and measurable results</li>
+                  <li>Expertise You Can Trust: Years of experience ensuring effective strategies.</li>
+                  <li>Dedicated Support: Always available to guide and support your growth.</li>
+                  <li>Proven Track Record: A history of transforming brands and delivering significant ROI.</li>
+                  <li>Collaborative Partnership: We work closely with you, valuing your input and ensuring your vision is realized.</li>
+                </ul>
+
+              </div>
+              <div class="col-md-6">
+                <img src="../assets/images/diff.png" class="img-fluid">
+              </div>
+            </div>
+        </div> 
+    </section>
+           <!--testimonals-->
+<section id="testimonals">
+  <div class="container">
+    <h1 class="title text-center"> WHAT CLIENTS SAY</h1>
+    <div class="row offset-1">
+      <div class="col-md-5 testimonals">
+        <p> Working with <b>SocialSpark Agency</b>  has been a game-changer for our brand. Their tailored strategies and creative approach have significantly boosted our engagement and visibility!</p>
+        <img src="../assets/images/user1.jpg" id="user1">
+        <p class="user-details"><b> Agelina</b><br>
+          Brand Strategist</p>
+      </div>
+      <div class="col-md-5 testimonals">
+        <p> We’ve seen incredible growth since partnering with  <b>SocialSpark Agency</b> . Their dedication and expertise make them an invaluable part of our marketing strategy! Grateful for the fantastic services</p>
+        <img src="../assets/images/user2.jpg" id="user2">
+        <p class="user-details"><b> John Doe</b><br>
+        Director</p>
+      </div>
+     
+  </div>
+
+
+</section>
+<!--social media section-->
+<section id="social-media">
+<div class="container text-center">
+  <p id="findus"> FIND US ON SOCIAL MEDIA</p>
+  <div class="social-icons">
+    <a href=""><img src="../assets/images/facebook-icon.png" alt=""></a>
+    <a href=""><img src="../assets/images/instagram-icon.png" alt=""></a>
+    <a href=""><img src="../assets/images/whatsapp-icon.png" alt=""></a>
+    <a href=""><img src="../assets/images/linkedin-icon.png" alt=""></a>
+
+  </div>
+
+</div>
+</section>
+<!--footer section-->
+<section id="footer">
+  <img src="../assets/images/wave2.png" class="footer-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 footer-box">
+        <img src="../assets/images/log.png" alt="">
+        <p>Thank you for choosing <b>SocialSpark Agency</b> as your trusted partner in social media marketing. We’re dedicated to helping you elevate your brand, engage your audience, and achieve measurable results. For inquiries, support, or to learn more about our services, please feel free to reach out. Let’s embark on this journey to success together!</p>
+      </div>
+
+      <div class="col-md-4 footer-box">
+      
+        <p class="footie"><b>CONTACT US</b></p>
+        <p><i class="fa fa-map-marker" ></i>World trade center</p>
+        <p > <i class="fa fa-phone" ></i>987654321</p>
+        <p> <i class="fa fa-envelope" ></i>dhanu@gmail.com
+        </p>
+      </div>
+      <div class="col-md-4 footer-box">
+      
+        <p class="footie"><b>SUBSCRIBE NEWSLETTER</b></p>
+        <input type="email" class="form-control" placeholder="Your Mail">
+        <button type="button" class="btn btn-primary">Subscribe</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p class="copy-right"> Website crafted by Dhanushri</p>
+</section>
+
+<!--smooth scroll.js-->
+<script src="smooth-scroll.js"></script>
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body>
+</html>
